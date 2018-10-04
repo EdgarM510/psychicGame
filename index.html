@@ -69,6 +69,8 @@ document.onkeyup = function (event) {
             else if (remaining === 1) {
                 loses++;
                 remaining--; 
+                guessLog = guessLog + ' ' + whoDat;
+                scoreboard();
                 // timeout to update the scoreboard before the alert   
                 setTimeout(function(){
                     alert('you guessed\n' + guessLog + '\nnone were correct.\nyou lose!');
@@ -91,7 +93,8 @@ document.onkeyup = function (event) {
             scoreboard();
         }
         // if not a letter then pause
-        else {alert('press a lowercase letter');};
+        else {alert('press a lowercase letter');
+        };
 };
 
     
